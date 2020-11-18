@@ -278,6 +278,90 @@ namespace OPMSProto20202109.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "ADMIN", "0ac8c81e-c298-4d55-b658-849ea36252df", "Admin", "ADMIN" },
+                    { "EMPLOYEE", "7064961a-ff53-4b12-b553-45bf52a71556", "Employee", "EMPLOYEE" },
+                    { "MANAGER", "b1f8887f-ccd8-4588-923a-234333e93425", "Manager", "MANAGER" },
+                    { "HR", "f938175f-2a05-483f-b755-6b678396ae74", "HR", "HR" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "Active", "DepartmentID", "ExemptFromOvertime", "FirstName", "HourlyWage", "LastName" },
+                values: new object[,]
+                {
+                    { "ADMIN", 0, "546b4452-28b2-4050-9baf-69d7896c5a32", "Employee", "Admin@Develop.com", true, false, null, "ADMIN@DEVELOP.COM", "ADMIN@DEVELOP.COM", "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==", null, false, "e5a932c1-3d01-4ca3-95c6-e9e2da5eebf0", false, "Admin@develop.com", true, null, false, "Admin", 30.0, "Admin" },
+                    { "HR", 0, "04570a7e-8b17-4e3f-8425-a2296f45b07c", "Employee", "HR@develop.com", true, false, null, "HR@DEVELOP.COM", "HR@DEVELOP.COM", "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==", null, false, "c4f57f1d-6300-4411-ac78-e6d1cc104374", false, "HR@develop.com", true, null, false, "HR", 30.0, "HR" },
+                    { "EMPLOYEE", 0, "3fced326-333e-4370-87b2-27d54f0b8dbd", "Employee", "EMPLOYEE@develop.com", true, false, null, "EMPLOYEE@DEVELOP.COM", "EMPLOYEE@DEVELOP.COM", "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==", null, false, "0634fd6f-5b39-444c-b3fe-4b98064f6bf3", false, "EMPLOYEE@develop.com", true, null, false, "EMPLOYEE", 30.0, "EMPLOYEE" },
+                    { "MANAGER", 0, "f8ff18ed-196a-4cac-9e96-7d808c5dc7ea", "Employee", "MANAGER@develop.com", true, false, null, "MANAGER@DEVELOP.COM", "MANAGER@DEVELOP.COM", "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==", null, false, "1f2b37a7-ea1c-40ac-92c1-09dd593b23c2", false, "MANAGER@develop.com", true, null, false, "MANAGER", 30.0, "MANAGER" }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "User",
+                table: "Addresses",
+                columns: new[] { "ID", "City", "State", "StreetAddress", "TimeStamp", "ZIP" },
+                values: new object[,]
+                {
+                    { 1, "Parkersburg", "West Virginia", "300 Campus Dr.", new DateTime(2020, 11, 18, 16, 20, 11, 484, DateTimeKind.Local).AddTicks(2744), "26101" },
+                    { 2, "Ripley", "West Virginia", "105 Academy Dr.", new DateTime(2020, 11, 18, 16, 20, 11, 484, DateTimeKind.Local).AddTicks(2840), "25271" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "UserId", "RoleId" },
+                values: new object[,]
+                {
+                    { "ADMIN", "ADMIN" },
+                    { "HR", "HR" },
+                    { "EMPLOYEE", "EMPLOYEE" },
+                    { "MANAGER", "MANAGER" }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "User",
+                table: "Campuses",
+                columns: new[] { "ID", "Active", "AddressID", "CampusName", "TimeStamp" },
+                values: new object[,]
+                {
+                    { 1, true, 1, "West Virginia University at Parkersburg", new DateTime(2020, 11, 18, 16, 20, 11, 484, DateTimeKind.Local).AddTicks(4313) },
+                    { 2, true, 2, "WVUP Jackson County Center", new DateTime(2020, 11, 18, 16, 20, 11, 484, DateTimeKind.Local).AddTicks(4362) }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "User",
+                table: "Divisions",
+                columns: new[] { "ID", "Active", "DivisionName", "SupervisorID", "TimeStamp" },
+                values: new object[,]
+                {
+                    { 1, true, "Science, Technology, Engineering & Math", "ADMIN", new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(1944) },
+                    { 2, true, "Information Technology", "ADMIN", new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2226) },
+                    { 3, true, "Business", "ADMIN", new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2247) },
+                    { 4, true, "Maintenance", "ADMIN", new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2253) },
+                    { 5, true, "Academic and Student Affairs", "ADMIN", new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2259) },
+                    { 6, true, "Office of the President", "ADMIN", new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2264) },
+                    { 7, true, "Humanities and Fine Arts", "ADMIN", new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2270) }
+                });
+
+            migrationBuilder.InsertData(
+                schema: "User",
+                table: "Departments",
+                columns: new[] { "ID", "Active", "DepartmentName", "DivisionID", "TimeStamp" },
+                values: new object[,]
+                {
+                    { 1, true, "Computer Science", 1, new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3833) },
+                    { 7, true, "STEM", 1, new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3909) },
+                    { 2, true, "Information Technology", 2, new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3880) },
+                    { 3, true, "Business", 3, new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3887) },
+                    { 4, true, "Maintenance", 4, new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3892) },
+                    { 5, true, "Office of Academic Affairs", 5, new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3898) },
+                    { 6, true, "Office of the President", 6, new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3903) },
+                    { 8, true, "Humanities and Fine Arts", 7, new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3914) }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",

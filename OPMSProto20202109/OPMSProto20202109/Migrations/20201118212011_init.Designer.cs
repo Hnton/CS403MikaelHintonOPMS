@@ -10,14 +10,14 @@ using OPMSProto20202109.Data;
 namespace OPMSProto20202109.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201117145325_init")]
+    [Migration("20201118212011_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.9")
+                .HasAnnotation("ProductVersion", "3.1.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -46,6 +46,36 @@ namespace OPMSProto20202109.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "ADMIN",
+                            ConcurrencyStamp = "0ac8c81e-c298-4d55-b658-849ea36252df",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "EMPLOYEE",
+                            ConcurrencyStamp = "7064961a-ff53-4b12-b553-45bf52a71556",
+                            Name = "Employee",
+                            NormalizedName = "EMPLOYEE"
+                        },
+                        new
+                        {
+                            Id = "MANAGER",
+                            ConcurrencyStamp = "b1f8887f-ccd8-4588-923a-234333e93425",
+                            Name = "Manager",
+                            NormalizedName = "MANAGER"
+                        },
+                        new
+                        {
+                            Id = "HR",
+                            ConcurrencyStamp = "f938175f-2a05-483f-b755-6b678396ae74",
+                            Name = "HR",
+                            NormalizedName = "HR"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -202,6 +232,28 @@ namespace OPMSProto20202109.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "ADMIN",
+                            RoleId = "ADMIN"
+                        },
+                        new
+                        {
+                            UserId = "HR",
+                            RoleId = "HR"
+                        },
+                        new
+                        {
+                            UserId = "EMPLOYEE",
+                            RoleId = "EMPLOYEE"
+                        },
+                        new
+                        {
+                            UserId = "MANAGER",
+                            RoleId = "MANAGER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -252,6 +304,26 @@ namespace OPMSProto20202109.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Addresses","User");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            City = "Parkersburg",
+                            State = "West Virginia",
+                            StreetAddress = "300 Campus Dr.",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 484, DateTimeKind.Local).AddTicks(2744),
+                            ZIP = "26101"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            City = "Ripley",
+                            State = "West Virginia",
+                            StreetAddress = "105 Academy Dr.",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 484, DateTimeKind.Local).AddTicks(2840),
+                            ZIP = "25271"
+                        });
                 });
 
             modelBuilder.Entity("OPMSProto20202109.Models.Campus", b =>
@@ -279,6 +351,24 @@ namespace OPMSProto20202109.Migrations
                     b.HasIndex("AddressID");
 
                     b.ToTable("Campuses","User");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Active = true,
+                            AddressID = 1,
+                            CampusName = "West Virginia University at Parkersburg",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 484, DateTimeKind.Local).AddTicks(4313)
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Active = true,
+                            AddressID = 2,
+                            CampusName = "WVUP Jackson County Center",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 484, DateTimeKind.Local).AddTicks(4362)
+                        });
                 });
 
             modelBuilder.Entity("OPMSProto20202109.Models.ClockInOut", b =>
@@ -331,6 +421,72 @@ namespace OPMSProto20202109.Migrations
                     b.HasIndex("DivisionID");
 
                     b.ToTable("Departments","User");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Active = true,
+                            DepartmentName = "Computer Science",
+                            DivisionID = 1,
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3833)
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Active = true,
+                            DepartmentName = "Information Technology",
+                            DivisionID = 2,
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3880)
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Active = true,
+                            DepartmentName = "Business",
+                            DivisionID = 3,
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3887)
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Active = true,
+                            DepartmentName = "Maintenance",
+                            DivisionID = 4,
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3892)
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Active = true,
+                            DepartmentName = "Office of Academic Affairs",
+                            DivisionID = 5,
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3898)
+                        },
+                        new
+                        {
+                            ID = 6,
+                            Active = true,
+                            DepartmentName = "Office of the President",
+                            DivisionID = 6,
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3903)
+                        },
+                        new
+                        {
+                            ID = 7,
+                            Active = true,
+                            DepartmentName = "STEM",
+                            DivisionID = 1,
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3909)
+                        },
+                        new
+                        {
+                            ID = 8,
+                            Active = true,
+                            DepartmentName = "Humanities and Fine Arts",
+                            DivisionID = 7,
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(3914)
+                        });
                 });
 
             modelBuilder.Entity("OPMSProto20202109.Models.Division", b =>
@@ -357,6 +513,64 @@ namespace OPMSProto20202109.Migrations
                     b.HasIndex("SupervisorID");
 
                     b.ToTable("Divisions","User");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Active = true,
+                            DivisionName = "Science, Technology, Engineering & Math",
+                            SupervisorID = "ADMIN",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(1944)
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Active = true,
+                            DivisionName = "Information Technology",
+                            SupervisorID = "ADMIN",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2226)
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Active = true,
+                            DivisionName = "Business",
+                            SupervisorID = "ADMIN",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2247)
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Active = true,
+                            DivisionName = "Maintenance",
+                            SupervisorID = "ADMIN",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2253)
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Active = true,
+                            DivisionName = "Academic and Student Affairs",
+                            SupervisorID = "ADMIN",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2259)
+                        },
+                        new
+                        {
+                            ID = 6,
+                            Active = true,
+                            DivisionName = "Office of the President",
+                            SupervisorID = "ADMIN",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2264)
+                        },
+                        new
+                        {
+                            ID = 7,
+                            Active = true,
+                            DivisionName = "Humanities and Fine Arts",
+                            SupervisorID = "ADMIN",
+                            TimeStamp = new DateTime(2020, 11, 18, 16, 20, 11, 485, DateTimeKind.Local).AddTicks(2270)
+                        });
                 });
 
             modelBuilder.Entity("OPMSProto20202109.Models.TimeSheet", b =>
@@ -422,6 +636,92 @@ namespace OPMSProto20202109.Migrations
                     b.ToTable("Employees","User");
 
                     b.HasDiscriminator().HasValue("Employee");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "ADMIN",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "546b4452-28b2-4050-9baf-69d7896c5a32",
+                            Email = "Admin@Develop.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@DEVELOP.COM",
+                            NormalizedUserName = "ADMIN@DEVELOP.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "e5a932c1-3d01-4ca3-95c6-e9e2da5eebf0",
+                            TwoFactorEnabled = false,
+                            UserName = "Admin@develop.com",
+                            Active = true,
+                            ExemptFromOvertime = false,
+                            FirstName = "Admin",
+                            HourlyWage = 30.0,
+                            LastName = "Admin"
+                        },
+                        new
+                        {
+                            Id = "HR",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "04570a7e-8b17-4e3f-8425-a2296f45b07c",
+                            Email = "HR@develop.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "HR@DEVELOP.COM",
+                            NormalizedUserName = "HR@DEVELOP.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "c4f57f1d-6300-4411-ac78-e6d1cc104374",
+                            TwoFactorEnabled = false,
+                            UserName = "HR@develop.com",
+                            Active = true,
+                            ExemptFromOvertime = false,
+                            FirstName = "HR",
+                            HourlyWage = 30.0,
+                            LastName = "HR"
+                        },
+                        new
+                        {
+                            Id = "EMPLOYEE",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "3fced326-333e-4370-87b2-27d54f0b8dbd",
+                            Email = "EMPLOYEE@develop.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "EMPLOYEE@DEVELOP.COM",
+                            NormalizedUserName = "EMPLOYEE@DEVELOP.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "0634fd6f-5b39-444c-b3fe-4b98064f6bf3",
+                            TwoFactorEnabled = false,
+                            UserName = "EMPLOYEE@develop.com",
+                            Active = true,
+                            ExemptFromOvertime = false,
+                            FirstName = "EMPLOYEE",
+                            HourlyWage = 30.0,
+                            LastName = "EMPLOYEE"
+                        },
+                        new
+                        {
+                            Id = "MANAGER",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "f8ff18ed-196a-4cac-9e96-7d808c5dc7ea",
+                            Email = "MANAGER@develop.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "MANAGER@DEVELOP.COM",
+                            NormalizedUserName = "MANAGER@DEVELOP.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "1f2b37a7-ea1c-40ac-92c1-09dd593b23c2",
+                            TwoFactorEnabled = false,
+                            UserName = "MANAGER@develop.com",
+                            Active = true,
+                            ExemptFromOvertime = false,
+                            FirstName = "MANAGER",
+                            HourlyWage = 30.0,
+                            LastName = "MANAGER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mikael\\Desktop\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj": {}
+    "C:\\Users\\Mikael\\Documents\\GitHub\\CS403MikaelHintonOPMS\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mikael\\Desktop\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj": {
+    "C:\\Users\\Mikael\\Documents\\GitHub\\CS403MikaelHintonOPMS\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mikael\\Desktop\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj",
+        "projectUniqueName": "C:\\Users\\Mikael\\Documents\\GitHub\\CS403MikaelHintonOPMS\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj",
         "projectName": "OPMSProto20202109",
-        "projectPath": "C:\\Users\\Mikael\\Desktop\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj",
+        "projectPath": "C:\\Users\\Mikael\\Documents\\GitHub\\CS403MikaelHintonOPMS\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj",
         "packagesPath": "C:\\Users\\Mikael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mikael\\Desktop\\OPMSProto20202109\\OPMSProto20202109\\obj\\",
+        "outputPath": "C:\\Users\\Mikael\\Documents\\GitHub\\CS403MikaelHintonOPMS\\OPMSProto20202109\\OPMSProto20202109\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mikael\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,9 +38,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+            "Microsoft.AspNet.Identity.Core": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[2.2.3, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -52,13 +52,25 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",

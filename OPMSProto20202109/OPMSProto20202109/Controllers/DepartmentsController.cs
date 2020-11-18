@@ -48,7 +48,7 @@ namespace OPMSProto20202109.Controllers
         // GET: Departments/Create
         public IActionResult Create()
         {
-            ViewData["DivisionID"] = new SelectList(_context.Divisions, "ID", "ID");
+            ViewData["DivisionID"] = new SelectList(_context.Divisions, "ID", "DivisionName");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace OPMSProto20202109.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DivisionID"] = new SelectList(_context.Divisions, "ID", "ID", department.DivisionID);
+            ViewData["DivisionID"] = new SelectList(_context.Divisions, "ID", "DivisionName", department.DivisionID);
             return View(department);
         }
 
@@ -82,7 +82,7 @@ namespace OPMSProto20202109.Controllers
             {
                 return NotFound();
             }
-            ViewData["DivisionID"] = new SelectList(_context.Divisions, "ID", "ID", department.DivisionID);
+            ViewData["DivisionID"] = new SelectList(_context.Divisions, "ID", "DivisionName", department.DivisionID);
             return View(department);
         }
 
@@ -118,7 +118,7 @@ namespace OPMSProto20202109.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DivisionID"] = new SelectList(_context.Divisions, "ID", "ID", department.DivisionID);
+            ViewData["DivisionID"] = new SelectList(_context.Divisions, "ID", "DivisionName", department.DivisionID);
             return View(department);
         }
 

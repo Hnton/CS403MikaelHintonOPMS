@@ -22,7 +22,8 @@ using OPMSProto20202109.Models;
 
 namespace OPMSProto20202109.Areas.Identity.Pages.Account
 {
-    [AllowAnonymous]
+
+    [Authorize(Roles = "Admin,HR")]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
