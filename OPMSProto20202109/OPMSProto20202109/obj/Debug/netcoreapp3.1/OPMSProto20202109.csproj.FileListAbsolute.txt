@@ -466,3 +466,14 @@ C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSPro
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.csproj.CoreCompileInputs.cache
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheets\Create.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheets\Delete.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheets\Details.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheets\Edit.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheets\Index.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\Create.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\Delete.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\Details.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\Edit.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\Index.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\ClockOut.cshtml.g.cs

@@ -1,4 +1,5 @@
-﻿using OPMSProto20202109.Models.Base;
+﻿using OPMSProto20202109.Areas.Data;
+using OPMSProto20202109.Models.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,6 +12,12 @@ namespace OPMSProto20202109.Models
     [Table("ClockInOut", Schema = "User")]
     public class ClockInOut : EntityBase
     {
+
+        [ForeignKey(nameof(EmployeeID))]
+        public Employee Supervisor { get; set; }
+
+        public string EmployeeID { get; set; }
+
         [Required]
         public DateTime ClockInTime { get; set; }
 
