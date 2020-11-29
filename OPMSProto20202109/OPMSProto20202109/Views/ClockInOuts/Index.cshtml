@@ -49,10 +49,31 @@
                 @Html.DisplayFor(modelItem => item.TimeStamp)
             </td>
             <td>
-                <a asp-action="ClockOut" asp-route-id="@item.ID">ClockOut</a> |
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                @if (User.IsInRole("Employee"))
+                {
+                    <a asp-action="ClockOut" asp-route-id="@item.ID">ClockOut</a>
+                }
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="ClockOut" asp-route-id="@item.ID">ClockOut</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                }
+                @if (User.IsInRole("Manager"))
+                {
+                    <a asp-action="ClockOut" asp-route-id="@item.ID">ClockOut</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                }
+                @if (User.IsInRole("HR"))
+                {
+                    <a asp-action="ClockOut" asp-route-id="@item.ID">ClockOut</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                }
             </td>
         </tr>
 }

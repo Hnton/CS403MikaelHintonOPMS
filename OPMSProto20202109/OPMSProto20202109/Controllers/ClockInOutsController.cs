@@ -23,7 +23,7 @@ namespace OPMSProto20202109.Controllers
         // GET: ClockInOuts
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.ClockInOut.Include(c => c.Supervisor).Include(c => c.TimeSheet);
+            var applicationDbContext = _context.ClockInOut.Include(c => c.Supervisor).Include(c => c.TimeSheet).Where(i => i.EmployeeID.Equals(User.Identity.GetUserId()));
             return View(await applicationDbContext.ToListAsync());
         }
 
