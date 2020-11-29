@@ -477,3 +477,5 @@ C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSPro
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\Edit.cshtml.g.cs
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\Index.cshtml.g.cs
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\ClockInOuts\ClockOut.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheetWithClockInOuts\Index.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\local\mssql2.arm.json

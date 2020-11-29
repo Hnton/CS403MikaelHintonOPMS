@@ -10,10 +10,8 @@ using System.Threading.Tasks;
 
 namespace OPMSProto20202109.Models.ViewModels
 {
-    public class TimeSheetWithClockInOuts : EntityBase
+    public class TimeSheetWithClockInOutsViewModels : EntityBase
     {
-        [Required]
-        public string UserID { get; set; }
 
         [Required]
         [DefaultValue(ApprovalTypes.Waiting)]
@@ -32,10 +30,15 @@ namespace OPMSProto20202109.Models.ViewModels
         [Required]
         public bool ExemptFromOvertime { get; set; }
 
-        [ForeignKey(nameof(UserID))]
-        public Employee User { get; set; }
+        [ForeignKey(nameof(EmployeeID))]
+        public Employee Employee { get; set; }
 
-        [InverseProperty(nameof(ClockInOut.TimeSheet))]
-        public virtual List<ClockInOut> ClockIns { get; set; }
+        public string EmployeeID { get; set; }
+
+        [Required]
+        public DateTime ClockInTime { get; set; }
+
+        public DateTime? ClockOutTime { get; set; }
+
     }
 }

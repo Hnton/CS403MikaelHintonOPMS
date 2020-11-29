@@ -49,28 +49,28 @@ namespace OPMSProto20202109.Migrations
                         new
                         {
                             Id = "ADMIN",
-                            ConcurrencyStamp = "a4147303-b873-44d9-b7aa-196211d223d1",
+                            ConcurrencyStamp = "e776c596-b44a-4d0c-b7a1-87043805ff8e",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "EMPLOYEE",
-                            ConcurrencyStamp = "162da478-f28e-44f3-8aaf-c7df71db5be2",
+                            ConcurrencyStamp = "a9c97cf6-7d5e-465d-94d7-27cd0e59b3ec",
                             Name = "Employee",
                             NormalizedName = "EMPLOYEE"
                         },
                         new
                         {
                             Id = "MANAGER",
-                            ConcurrencyStamp = "4f19634c-f1ba-40eb-8f32-41926563e359",
+                            ConcurrencyStamp = "2733daad-48ad-45e1-83f0-f711ac0a29e7",
                             Name = "Manager",
                             NormalizedName = "MANAGER"
                         },
                         new
                         {
                             Id = "HR",
-                            ConcurrencyStamp = "1b65bfe0-7551-42a3-bac4-4b5d3a9202d5",
+                            ConcurrencyStamp = "d3cefd1f-7d5e-4b7c-9efa-dca666351841",
                             Name = "HR",
                             NormalizedName = "HR"
                         });
@@ -310,7 +310,7 @@ namespace OPMSProto20202109.Migrations
                             City = "Parkersburg",
                             State = "West Virginia",
                             StreetAddress = "300 Campus Dr.",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 895, DateTimeKind.Local).AddTicks(1170),
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 96, DateTimeKind.Local).AddTicks(1682),
                             ZIP = "26101"
                         },
                         new
@@ -319,7 +319,7 @@ namespace OPMSProto20202109.Migrations
                             City = "Ripley",
                             State = "West Virginia",
                             StreetAddress = "105 Academy Dr.",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 895, DateTimeKind.Local).AddTicks(1260),
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 96, DateTimeKind.Local).AddTicks(1768),
                             ZIP = "25271"
                         });
                 });
@@ -357,7 +357,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             AddressID = 1,
                             CampusName = "West Virginia University at Parkersburg",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 895, DateTimeKind.Local).AddTicks(2725)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 96, DateTimeKind.Local).AddTicks(3109)
                         },
                         new
                         {
@@ -365,7 +365,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             AddressID = 2,
                             CampusName = "WVUP Jackson County Center",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 895, DateTimeKind.Local).AddTicks(2771)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 96, DateTimeKind.Local).AddTicks(3157)
                         });
                 });
 
@@ -432,7 +432,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DepartmentName = "Computer Science",
                             DivisionID = 1,
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(1817)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(2540)
                         },
                         new
                         {
@@ -440,7 +440,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DepartmentName = "Information Technology",
                             DivisionID = 2,
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(1860)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(2582)
                         },
                         new
                         {
@@ -448,7 +448,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DepartmentName = "Business",
                             DivisionID = 3,
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(1867)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(2589)
                         },
                         new
                         {
@@ -456,7 +456,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DepartmentName = "Maintenance",
                             DivisionID = 4,
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(1872)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(2594)
                         },
                         new
                         {
@@ -464,7 +464,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DepartmentName = "Office of Academic Affairs",
                             DivisionID = 5,
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(1878)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(2600)
                         },
                         new
                         {
@@ -472,7 +472,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DepartmentName = "Office of the President",
                             DivisionID = 6,
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(1884)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(2606)
                         },
                         new
                         {
@@ -480,7 +480,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DepartmentName = "STEM",
                             DivisionID = 1,
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(1889)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(2611)
                         },
                         new
                         {
@@ -488,7 +488,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DepartmentName = "Humanities and Fine Arts",
                             DivisionID = 7,
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(1895)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(2617)
                         });
                 });
 
@@ -524,7 +524,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DivisionName = "Science, Technology, Engineering & Math",
                             SupervisorID = "ADMIN",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 895, DateTimeKind.Local).AddTicks(9997)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(618)
                         },
                         new
                         {
@@ -532,7 +532,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DivisionName = "Information Technology",
                             SupervisorID = "ADMIN",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(275)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(904)
                         },
                         new
                         {
@@ -540,7 +540,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DivisionName = "Business",
                             SupervisorID = "ADMIN",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(296)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(927)
                         },
                         new
                         {
@@ -548,7 +548,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DivisionName = "Maintenance",
                             SupervisorID = "ADMIN",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(302)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(933)
                         },
                         new
                         {
@@ -556,7 +556,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DivisionName = "Academic and Student Affairs",
                             SupervisorID = "ADMIN",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(308)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(939)
                         },
                         new
                         {
@@ -564,7 +564,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DivisionName = "Office of the President",
                             SupervisorID = "ADMIN",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(313)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(945)
                         },
                         new
                         {
@@ -572,7 +572,7 @@ namespace OPMSProto20202109.Migrations
                             Active = true,
                             DivisionName = "Humanities and Fine Arts",
                             SupervisorID = "ADMIN",
-                            TimeStamp = new DateTime(2020, 11, 23, 15, 49, 34, 896, DateTimeKind.Local).AddTicks(319)
+                            TimeStamp = new DateTime(2020, 11, 29, 16, 56, 15, 97, DateTimeKind.Local).AddTicks(951)
                         });
                 });
 
@@ -645,7 +645,7 @@ namespace OPMSProto20202109.Migrations
                         {
                             Id = "ADMIN",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b6d263b2-54d5-4685-8b1c-47bddc76c903",
+                            ConcurrencyStamp = "3f2dc300-cf52-47e4-b846-e2bd4dd50e71",
                             Email = "Admin@Develop.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
@@ -653,7 +653,7 @@ namespace OPMSProto20202109.Migrations
                             NormalizedUserName = "ADMIN@DEVELOP.COM",
                             PasswordHash = "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "460b033a-3b32-421e-9777-34d3075e8f6e",
+                            SecurityStamp = "cbe2b09a-b111-4155-aa7b-0dd0dc374ff0",
                             TwoFactorEnabled = false,
                             UserName = "Admin@develop.com",
                             Active = true,
@@ -666,7 +666,7 @@ namespace OPMSProto20202109.Migrations
                         {
                             Id = "HR",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8f322e9d-4122-408a-adff-edfcc6cf086c",
+                            ConcurrencyStamp = "6d1a7d9a-0413-4db5-be07-5932a590fe1e",
                             Email = "HR@develop.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
@@ -674,7 +674,7 @@ namespace OPMSProto20202109.Migrations
                             NormalizedUserName = "HR@DEVELOP.COM",
                             PasswordHash = "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "570cb8f9-890d-4a31-88fd-facb720bdec8",
+                            SecurityStamp = "61d9e540-72c5-4065-b383-43b96b60ffa3",
                             TwoFactorEnabled = false,
                             UserName = "HR@develop.com",
                             Active = true,
@@ -687,7 +687,7 @@ namespace OPMSProto20202109.Migrations
                         {
                             Id = "EMPLOYEE",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "bdf82d0a-5633-40d0-bdc6-d640f2ed114b",
+                            ConcurrencyStamp = "1e113ee5-9b4a-44ce-a2cd-cabd08ff5e8b",
                             Email = "EMPLOYEE@develop.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
@@ -695,7 +695,7 @@ namespace OPMSProto20202109.Migrations
                             NormalizedUserName = "EMPLOYEE@DEVELOP.COM",
                             PasswordHash = "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "253bdb23-fb7b-4e36-8386-59dba78bf7e6",
+                            SecurityStamp = "4be7c7a4-4797-4977-a5a1-d9001564dc0f",
                             TwoFactorEnabled = false,
                             UserName = "EMPLOYEE@develop.com",
                             Active = true,
@@ -708,7 +708,7 @@ namespace OPMSProto20202109.Migrations
                         {
                             Id = "MANAGER",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b1ab7d9f-7122-44c9-a578-11ee86a26a31",
+                            ConcurrencyStamp = "a6bed6c4-1ab3-4bad-a0f5-513159041468",
                             Email = "MANAGER@develop.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
@@ -716,7 +716,7 @@ namespace OPMSProto20202109.Migrations
                             NormalizedUserName = "MANAGER@DEVELOP.COM",
                             PasswordHash = "AQAAAAEAACcQAAAAEE6fNGBLk0gWXtI+YF/euDFjEP3ASy0lEumjpTNbqgowNOzt9/dY3UByIFgSIFf1bA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "83885efe-25ad-43eb-a09d-ff7656a70783",
+                            SecurityStamp = "a780b54f-6fd7-495d-ab6a-0d1cbc54b255",
                             TwoFactorEnabled = false,
                             UserName = "MANAGER@develop.com",
                             Active = true,

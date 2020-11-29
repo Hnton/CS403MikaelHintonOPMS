@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OPMSProto20202109.Areas.Data;
 using OPMSProto20202109.Models;
+using OPMSProto20202109.Models.ViewModels;
 
 namespace OPMSProto20202109.Data
 {

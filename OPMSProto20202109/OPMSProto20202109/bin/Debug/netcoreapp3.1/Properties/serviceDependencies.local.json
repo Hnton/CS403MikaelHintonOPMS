@@ -3,6 +3,12 @@
     "mssql1": {
       "type": "mssql.local",
       "connectionId": "DefaultConnection"
+    },
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/opmsmhserver/databases/OPMSProto20202109_db",
+      "type": "mssql.azure",
+      "connectionId": "AzureDefaultConnection",
+      "secretStore": null
     }
   }
 }

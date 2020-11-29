@@ -19,9 +19,11 @@ namespace OPMSProto20202109.Controllers
             _context = context;
         }
 
+
         // GET: TimeSheets
         public async Task<IActionResult> Index()
         {
+
             var applicationDbContext = _context.TimeSheets.Include(t => t.User);
             return View(await applicationDbContext.ToListAsync());
         }
