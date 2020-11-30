@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OPMSProto20202109.Data;
 using OPMSProto20202109.Models.ViewModels;
@@ -17,10 +18,16 @@ namespace OPMSProto20202109.Controllers
         }
         public IActionResult Index()
         {
+            
+
+
+
             var list = (from t in _context.TimeSheets
                         join c in _context.ClockInOut
-                        on t.UserID equals c.EmployeeID into ThisList
-                        from c in ThisList.DefaultIfEmpty()
+                        on t.UserID equals c.EmployeeID 
+                        join e in _context.Employees
+                        on c.EmployeeID equals e.Id into ThisList
+                        from e in ThisList.DefaultIfEmpty()
                         select new
                         {
                             t.Approved,
@@ -30,20 +37,21 @@ namespace OPMSProto20202109.Controllers
                             c.EmployeeID,
                             c.ClockInTime,
                             c.ClockOutTime,
-                            c.Supervisor
-                        }).ToList()
+                            c.Supervisor,
+                            e.HourlyWage
+                        }).Where(y => y.EmployeeID.Equals(User.Identity.GetUserId())).ToList()
                         .Select(x => new TimeSheetWithClockInOutsViewModels()
-                         {
-                             Approved = x.Approved,
-                             StartDate = x.StartDate,
-                             EndDate = x.EndDate,
-                             ReasonDenied = x.ReasonDenied,
-                             EmployeeID = x.EmployeeID,
-                             ClockInTime = x.ClockInTime,
-                             ClockOutTime = x.ClockOutTime,
-
+                        {
+                            Approved = x.Approved,
+                            StartDate = x.StartDate,
+                            EndDate = x.EndDate,
+                            ReasonDenied = x.ReasonDenied,
+                            EmployeeID = x.EmployeeID,
+                            ClockInTime = x.ClockInTime,
+                            ClockOutTime = x.ClockOutTime,
+                            TimeSpan = (TimeSpan)(x.ClockOutTime - x.ClockInTime),
+                            HourlyWage = x.HourlyWage
                         });
-
             return View(list);
         }
     }

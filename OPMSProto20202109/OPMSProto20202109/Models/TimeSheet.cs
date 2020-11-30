@@ -36,6 +36,7 @@ namespace OPMSProto20202109.Models
         [ForeignKey(nameof(UserID))]
         public Employee User { get; set; }
 
+
         [InverseProperty(nameof(ClockInOut.TimeSheet))]
         public virtual List<ClockInOut> ClockIns { get; set; }
     }

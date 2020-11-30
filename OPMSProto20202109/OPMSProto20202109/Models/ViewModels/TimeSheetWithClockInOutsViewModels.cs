@@ -40,5 +40,9 @@ namespace OPMSProto20202109.Models.ViewModels
 
         public DateTime? ClockOutTime { get; set; }
 
+        public TimeSpan TimeSpan { get; set; }
+
+        [DataType(DataType.Currency)]
+        public double HourlyWage { get; set; }
     }
 }
