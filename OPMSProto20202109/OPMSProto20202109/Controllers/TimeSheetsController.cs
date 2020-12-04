@@ -122,7 +122,7 @@ namespace OPMSProto20202109.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index","Home");
             }
             ViewData["UserID"] = new SelectList(_context.Employees, "Id", "Id", timeSheet.UserID);
             ViewData["Approved"] = new SelectList(Enum.GetValues(typeof(ApprovalTypes)));
@@ -147,6 +147,7 @@ namespace OPMSProto20202109.Controllers
             }
 
             return View(timeSheet);
+          
         }
 
         // POST: TimeSheets/Delete/5

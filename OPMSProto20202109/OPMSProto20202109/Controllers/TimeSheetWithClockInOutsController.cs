@@ -17,19 +17,18 @@ namespace OPMSProto20202109.Controllers
             _context = context;
         }
         public IActionResult Index()
-        {
-            
-
+        {     
 
 
             var list = (from t in _context.TimeSheets
                         join c in _context.ClockInOut
-                        on t.UserID equals c.EmployeeID 
+                        on t.UserID equals c.EmployeeID
                         join e in _context.Employees
                         on c.EmployeeID equals e.Id into ThisList
                         from e in ThisList.DefaultIfEmpty()
                         select new
                         {
+                            t.ID,
                             t.Approved,
                             t.StartDate,
                             t.EndDate,
@@ -42,6 +41,7 @@ namespace OPMSProto20202109.Controllers
                         }).Where(y => y.EmployeeID.Equals(User.Identity.GetUserId())).ToList()
                         .Select(x => new TimeSheetWithClockInOutsViewModels()
                         {
+                            ID = x.ID,
                             Approved = x.Approved,
                             StartDate = x.StartDate,
                             EndDate = x.EndDate,
@@ -51,8 +51,91 @@ namespace OPMSProto20202109.Controllers
                             ClockOutTime = x.ClockOutTime,
                             TimeSpan = (TimeSpan)(x.ClockOutTime - x.ClockInTime),
                             HourlyWage = x.HourlyWage
-                        });
+                        }); ;
             return View(list);
         }
+
+        public IActionResult ManagerIndex()
+        {
+
+
+
+
+            var list = (from t in _context.TimeSheets
+                        join c in _context.ClockInOut
+                        on t.UserID equals c.EmployeeID
+                        join e in _context.Employees
+                        on c.EmployeeID equals e.Id into ThisList
+                        from e in ThisList.DefaultIfEmpty()
+                        select new
+                        {
+                            t.ID,
+                            t.Approved,
+                            t.StartDate,
+                            t.EndDate,
+                            t.ReasonDenied,
+                            c.EmployeeID,
+                            c.ClockInTime,
+                            c.ClockOutTime,
+                            c.Supervisor,
+                            e.HourlyWage
+                        }).Where(y => !y.EmployeeID.Equals(User.Identity.GetUserId())).Where(y => !y.EmployeeID.Equals("HR")).ToList()
+                        .Select(x => new TimeSheetWithClockInOutsViewModels()
+                        {
+                            ID = x.ID,
+                            Approved = x.Approved,
+                            StartDate = x.StartDate,
+                            EndDate = x.EndDate,
+                            ReasonDenied = x.ReasonDenied,
+                            EmployeeID = x.EmployeeID,
+                            ClockInTime = x.ClockInTime,
+                            ClockOutTime = x.ClockOutTime,
+                            TimeSpan = (TimeSpan)(x.ClockOutTime - x.ClockInTime),
+                            HourlyWage = x.HourlyWage
+                        }); ;
+            return View(list);
+        }
+
+        public IActionResult HRIndex()
+        {
+
+
+
+
+            var list = (from t in _context.TimeSheets
+                        join c in _context.ClockInOut
+                        on t.UserID equals c.EmployeeID
+                        join e in _context.Employees
+                        on c.EmployeeID equals e.Id into ThisList
+                        from e in ThisList.DefaultIfEmpty()
+                        select new
+                        {
+                            t.ID,
+                            t.Approved,
+                            t.StartDate,
+                            t.EndDate,
+                            t.ReasonDenied,
+                            c.EmployeeID,
+                            c.ClockInTime,
+                            c.ClockOutTime,
+                            c.Supervisor,
+                            e.HourlyWage
+                        }).ToList()
+                        .Select(x => new TimeSheetWithClockInOutsViewModels()
+                        {
+                            ID = x.ID,
+                            Approved = x.Approved,
+                            StartDate = x.StartDate,
+                            EndDate = x.EndDate,
+                            ReasonDenied = x.ReasonDenied,
+                            EmployeeID = x.EmployeeID,
+                            ClockInTime = x.ClockInTime,
+                            ClockOutTime = x.ClockOutTime,
+                            TimeSpan = (TimeSpan)(x.ClockOutTime - x.ClockInTime),
+                            HourlyWage = x.HourlyWage
+                        }); ;
+            return View(list);
+        }
+
     }
 }

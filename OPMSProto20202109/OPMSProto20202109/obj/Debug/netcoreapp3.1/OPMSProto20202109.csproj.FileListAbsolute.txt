@@ -478,3 +478,6 @@ C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSPro
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\staticwebassets\OPMSProto20202109.StaticWebAssets.Manifest.cache
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\staticwebassets\OPMSProto20202109.StaticWebAssets.xml
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.genruntimeconfig.cache
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.csprojAssemblyReference.cache
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheetWithClockInOuts\ManagerIndex.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheetWithClockInOuts\HRIndex.cshtml.g.cs
