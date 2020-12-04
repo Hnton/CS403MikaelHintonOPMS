@@ -50,6 +50,7 @@ namespace OPMSProto20202109.Controllers
         // GET: ClockInOuts/Create
         public IActionResult Create()
         {
+
             ViewData["EmployeeID"] = new SelectList(_context.Employees, "Id", "Email");
             ViewData["TimeSheetID"] = new SelectList(_context.TimeSheets, "ID", "UserID");
             return View();

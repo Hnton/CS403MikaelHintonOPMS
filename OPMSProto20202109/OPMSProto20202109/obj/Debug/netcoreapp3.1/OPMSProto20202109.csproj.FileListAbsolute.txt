@@ -216,9 +216,6 @@ C:\Users\Mikael\Desktop\OPMSProto20202109\OPMSProto20202109\bin\Debug\netcoreapp
 C:\Users\Mikael\Desktop\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.csprojAssemblyReference.cache
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.AssemblyInfoInputs.cache
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.AssemblyInfo.cs
-C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.csproj.CoreCompileInputs.cache
-C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.RazorAssemblyInfo.cache
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.RazorAssemblyInfo.cs
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.TagHelpers.input.cache
@@ -481,3 +478,6 @@ C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSPro
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.csprojAssemblyReference.cache
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheetWithClockInOuts\ManagerIndex.cshtml.g.cs
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\Razor\Views\TimeSheetWithClockInOuts\HRIndex.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.csproj.CoreCompileInputs.cache
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Debug\netcoreapp3.1\OPMSProto20202109.MvcApplicationPartsAssemblyInfo.cache

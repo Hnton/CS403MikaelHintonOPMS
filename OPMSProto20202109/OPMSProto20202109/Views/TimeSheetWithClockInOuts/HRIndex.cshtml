@@ -19,6 +19,17 @@
 <p>
     <a asp-controller="TimeSheets" asp-action="Create">Create New TimeSheet</a>
 </p>
+@using (Html.BeginForm("HRIndex", "TimeSheetWithClockInOuts", FormMethod.Get))
+{
+    <fieldset>
+        <legend>Search criteria</legend>
+        @Html.Label("StartDate", "Start Date:")
+        <input class="start" id="start" name="start" type="date" value="">
+        @Html.Label("enddate", "End Date:")
+        <input class="start" id="end" name="end" type="date" value="">
+        <input type="submit" value="Apply" />
+    </fieldset>
+}
 <table class="table">
     <thead>
         <tr>

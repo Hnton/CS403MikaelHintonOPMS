@@ -16,9 +16,10 @@ namespace OPMSProto20202109.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
-        {     
-
+        public IActionResult Index(DateTime? start, DateTime? end)
+        {
+            ViewBag.start = start;
+            ViewBag.end = end;
 
             var list = (from t in _context.TimeSheets
                         join c in _context.ClockInOut
@@ -38,7 +39,7 @@ namespace OPMSProto20202109.Controllers
                             c.ClockOutTime,
                             c.Supervisor,
                             e.HourlyWage
-                        }).Where(y => y.EmployeeID.Equals(User.Identity.GetUserId())).ToList()
+                        }).Where(y => y.EmployeeID.Equals(User.Identity.GetUserId())).Where(x => x.StartDate >= start && x.EndDate <= end).OrderByDescending(x => x.Approved).ToList()
                         .Select(x => new TimeSheetWithClockInOutsViewModels()
                         {
                             ID = x.ID,
@@ -55,7 +56,7 @@ namespace OPMSProto20202109.Controllers
             return View(list);
         }
 
-        public IActionResult ManagerIndex()
+        public IActionResult ManagerIndex(DateTime? start, DateTime? end)
         {
 
 
@@ -79,7 +80,7 @@ namespace OPMSProto20202109.Controllers
                             c.ClockOutTime,
                             c.Supervisor,
                             e.HourlyWage
-                        }).Where(y => !y.EmployeeID.Equals(User.Identity.GetUserId())).Where(y => !y.EmployeeID.Equals("HR")).ToList()
+                        }).Where(y => !y.EmployeeID.Equals(User.Identity.GetUserId())).Where(y => !y.EmployeeID.Equals("HR") && y.StartDate >= start && y.EndDate <= end).OrderByDescending(x => x.Approved).ToList()
                         .Select(x => new TimeSheetWithClockInOutsViewModels()
                         {
                             ID = x.ID,
@@ -96,7 +97,7 @@ namespace OPMSProto20202109.Controllers
             return View(list);
         }
 
-        public IActionResult HRIndex()
+        public IActionResult HRIndex(DateTime? start, DateTime? end)
         {
 
 
@@ -120,7 +121,7 @@ namespace OPMSProto20202109.Controllers
                             c.ClockOutTime,
                             c.Supervisor,
                             e.HourlyWage
-                        }).ToList()
+                        }).Where(x => x.StartDate >= start && x.EndDate <= end).OrderByDescending(x => x.Approved).ToList()
                         .Select(x => new TimeSheetWithClockInOutsViewModels()
                         {
                             ID = x.ID,

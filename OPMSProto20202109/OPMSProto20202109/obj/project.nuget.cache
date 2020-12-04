@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "kTsWNHOLbU9BKxRrLE0u6w/WycuJOntNe/6nzX/2u6pOZ3r2ezCkfZ0OC3kxYpmwYc4FAI+FYoqvVx3XEhOrqg==",
+  "dgSpecHash": "G0+EpngXtbuVvwwhqpYkQQpjoPQ+kiRf3FRb0t2VQAv8L3yfOUPDXTjujOTYjh29+8uDooBDrURBXDtMYNQ1hw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mikael\\Documents\\GitHub\\CS403MikaelHintonOPMS\\OPMSProto20202109\\OPMSProto20202109\\OPMSProto20202109.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mikael\\.nuget\\packages\\bootstrap\\4.5.3\\bootstrap.4.5.3.nupkg.sha512",
+    "C:\\Users\\Mikael\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",
@@ -70,6 +72,7 @@
     "C:\\Users\\Mikael\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
+    "C:\\Users\\Mikael\\.nuget\\packages\\popper.js\\1.16.1\\popper.js.1.16.1.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
