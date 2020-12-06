@@ -36,7 +36,7 @@ namespace OPMSProto20202109.Controllers
                             ZIP = a.ZIP
 
                         }).ToList()
-                         .Select(x => new CampusWithAddressViewModels()
+                         .Select(x => new CampusAndAddressViewModels()
                          {
                              CampusName = x.CampusName,
                              Active = x.Active,

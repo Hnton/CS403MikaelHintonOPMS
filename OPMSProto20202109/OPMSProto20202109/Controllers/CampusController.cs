@@ -59,11 +59,12 @@ namespace OPMSProto20202109.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CampusName,AddressID,Active,ID,TimeStamp")] Campus campus)
         {
+            campus.TimeStamp = DateTime.Now;
             if (ModelState.IsValid)
             {
                 _context.Add(campus);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "CampusAndAddress");
             }
             ViewData["AddressID"] = new SelectList(_context.Addresses, "ID", "City", campus.AddressID);
             return View(campus);

@@ -31,7 +31,7 @@ namespace OPMSProto20202109.Models.ViewModels
         public bool ExemptFromOvertime { get; set; }
 
         [ForeignKey(nameof(EmployeeID))]
-        public Employee Employee { get; set; }
+        public Employee EmployeeUser { get; set; }
 
         public string EmployeeID { get; set; }
 

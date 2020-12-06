@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OPMSProto20202109.Models.ViewModels
 {
-    public class CampusWithAddressViewModels : EntityBase
+    public class CampusAndAddressViewModels : EntityBase
     {
         [Required]
         [Display(Name = "Campus Name")]

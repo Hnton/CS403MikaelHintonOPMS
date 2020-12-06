@@ -56,11 +56,12 @@ namespace OPMSProto20202109.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("City,State,StreetAddress,ZIP,ID,TimeStamp")] Address address)
         {
+            address.TimeStamp = DateTime.Now;
             if (ModelState.IsValid)
             {
                 _context.Add(address);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create", "Campus");
             }
             return View(address);
         }

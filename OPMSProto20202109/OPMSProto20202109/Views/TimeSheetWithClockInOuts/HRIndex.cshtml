@@ -111,19 +111,16 @@
                     {
                         <a asp-controller="Timesheets" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
                         <a asp-controller="Timesheets" asp-action="Details" asp-route-id="@item.ID">Details</a>
-                        <a asp-controller="Timesheets" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
                     }
                     @if (User.IsInRole("Manager"))
                     {
                         <a asp-controller="Timesheets" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
                         <a asp-controller="Timesheets" asp-action="Details" asp-route-id="@item.ID">Details</a>
-                        <a asp-controller="Timesheets" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
                     }
                     @if (User.IsInRole("HR"))
                     {
                         <a asp-controller="Timesheets" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
                         <a asp-controller="Timesheets" asp-action="Details" asp-route-id="@item.ID">Details</a>
-                        <a asp-controller="Timesheets" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
                     }
                 </td>
             </tr>

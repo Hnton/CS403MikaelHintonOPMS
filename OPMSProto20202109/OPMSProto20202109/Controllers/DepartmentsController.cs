@@ -59,6 +59,7 @@ namespace OPMSProto20202109.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("DepartmentName,Active,DivisionID,ID,TimeStamp")] Department department)
         {
+            department.TimeStamp = DateTime.Now;
             if (ModelState.IsValid)
             {
                 _context.Add(department);

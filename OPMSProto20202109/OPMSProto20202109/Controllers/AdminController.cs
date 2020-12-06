@@ -10,7 +10,7 @@ using OPMSProto20202109.Data;
 
 namespace OPMSProto20202109.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin, HR")]
     public class AdminController : Controller
     {
         private ApplicationDbContext _context;
