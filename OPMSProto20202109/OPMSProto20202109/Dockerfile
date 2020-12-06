@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["OPMSProto20202109/OPMSProto20202109.csproj", "OPMSProto20202109/"]
+COPY ["OPMSProto20202109/OPMSProto20202109.csproj", "OPMSProto20202109"]
 RUN dotnet restore "OPMSProto20202109/OPMSProto20202109.csproj"
 COPY . .
 WORKDIR "/src/OPMSProto20202109"
