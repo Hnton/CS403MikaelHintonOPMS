@@ -263,3 +263,5 @@ C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSPro
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Release\netcoreapp3.1\OPMSProto20202109.pdb
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Release\netcoreapp3.1\OPMSProto20202109.genruntimeconfig.cache
 C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\local\mssql2.arm.json
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Release\netcoreapp3.1\Razor\Views\TimeSheetWithClockInOuts\HRIndex.cshtml.g.cs
+C:\Users\Mikael\Documents\GitHub\CS403MikaelHintonOPMS\OPMSProto20202109\OPMSProto20202109\obj\Release\netcoreapp3.1\Razor\Views\TimeSheetWithClockInOuts\ManagerIndex.cshtml.g.cs
