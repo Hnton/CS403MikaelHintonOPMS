@@ -1,0 +1,52 @@
+on: [push]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout Github Action' 
+      uses: actions/checkout@master
+
+    - name: 'Login via Azure CLI'
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - uses: azure/docker-login@v1
+      with:
+        login-server: opmsproto2020210920201129163804.azurecr.io
+        username: ${{ secrets.acr_opmsproto2020210920201129163804_username }}
+        password: ${{ secrets.acr_opmsproto2020210920201129163804_password }}
+
+    - name: Build and push image to ACR
+      id: build-image
+      run: |
+        docker build "$GITHUB_WORKSPACE/OPMSProto20202109/OPMSProto20202109" -f  "OPMSProto20202109/OPMSProto20202109/Dockerfile" -t opmsproto2020210920201129163804.azurecr.io/opmsmikaelhintonwebapp-img:${{ github.sha }}
+        docker push opmsproto2020210920201129163804.azurecr.io/opmsmikaelhintonwebapp-img:${{ github.sha }}
+    - name: Set Web App ACR authentication
+      uses: Azure/appservice-settings@v1
+      with: 
+        app-name: OPMSMikaelHintonWebApp
+        app-settings-json: | 
+          [
+            {
+              "name": "DOCKER_REGISTRY_SERVER_URL",
+              "value": "opmsproto2020210920201129163804.azurecr.io",
+              "slotSetting": false
+            },
+            {
+              "name": "DOCKER_REGISTRY_SERVER_USERNAME",
+              "value": "${{ secrets.acr_opmsproto2020210920201129163804_username }}",
+              "slotSetting": false
+            },
+            {
+              "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
+              "value": "${{ secrets.acr_opmsproto2020210920201129163804_password }}",
+              "slotSetting": false
+            }            
+          ]
+      
+    - uses: azure/webapps-deploy@v2
+      with:
+        app-name: OPMSMikaelHintonWebApp
+        images: opmsproto2020210920201129163804.azurecr.io/opmsmikaelhintonwebapp-img:${{ github.sha }} 
