@@ -21,7 +21,7 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/OPMSProto20202109/OPMSProto20202109" -f  "OPMSProto20202109/OPMSProto20202109/Dockerfile" -t opmsproto2020210920201129163804.azurecr.io/opmsmikaelhintonwebapp-img:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/OPMSProto20202109/OPMSProto20202109" -f  "$GITHUB_WORKSPACE/OPMSProto20202109/OPMSProto20202109/Dockerfile" -t opmsproto2020210920201129163804.azurecr.io/opmsmikaelhintonwebapp-img:${{ github.sha }}
         docker push opmsproto2020210920201129163804.azurecr.io/opmsmikaelhintonwebapp-img:${{ github.sha }}
     - name: Set Web App ACR authentication
       uses: Azure/appservice-settings@v1
